@@ -1,0 +1,41 @@
+{
+  "name": "@iiaaai/histore",
+  "version": "0.1.3",
+  "description": "Lightweight undo/redo and history management middleware for Zustand with Immer",
+  "repository": "https://github.com/iiaaai/histore",
+  "keywords": [
+    "zustand",
+    "immer",
+    "undo",
+    "redo",
+    "history",
+    "middleware",
+    "state-management",
+    "transaction",
+    "typescript"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest --run",
+    "deploy": "npm run build && npm publish --access public"
+  },
+  "peerDependencies": {
+    "zustand": "^5.0.5"
+  },
+  "dependencies": {
+    "immer": "^10.1.1"
+  },
+  "devDependencies": {
+    "react": "^19.1.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
